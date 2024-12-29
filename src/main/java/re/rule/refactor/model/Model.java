@@ -46,7 +46,7 @@ public class Model {
 
     public void parse(Path f0) throws FileNotFoundException {
         {
-            String RULE = "[1 null assignment] ";
+//            String RULE = "[1 null assignment] ";
 //            cu.findAll(AssignExpr.class).stream()
 //                    .filter(
 //                            lambda -> lambda.getValue().toString().equals("null")
@@ -71,7 +71,7 @@ public class Model {
         cu = StaticJavaParser.parse(f0.toFile());
         {
 //        Rule: array index checking
-            String RULE = "[0 array access] ";
+            String RULE = "[1 array access] ";
             cu.findAll(ArrayAccessExpr.class).stream()
                     .filter(lambda ->
                             lambda.getParentNode().isPresent()
